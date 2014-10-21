@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>How many fingers am I holding up?</title>
+  </head>
+  <body>
+  <h1>How many fingers am I holding up?</h1>
+  <form id="guess_form">
+    <fieldset>
+      <label for="choice_0">
+        <input type="radio" name="user_guess" value="0" id="choice_0"/>
+        0
+      </label>
+      <label for="choice_1">
+        <input type="radio" name="user_guess" value="1" id="choice_1"/>
+        1
+      </label>
+      <label for="choice_2">
+        <input type="radio" name="user_guess" value="2" id="choice_2"/>
+        2
+      </label>
+      <label for="choice_3">
+        <input type="radio" name="user_guess" value="3" id="choice_3"/>
+        3
+      </label>
+      <label for="choice_4">
+        <input type="radio" name="user_guess" value="4" id="choice_4"/>
+        4
+      </label>
+      <label for="choice_5">
+        <input type="radio" name="user_guess" value="5" id="choice_5"/>
+        5
+      </label>
+      <button type="submit">Guess</button>
+    </fieldset>
+  </form>
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  <script>
+    $(document).ready(function () {
+    // When you submit the form we need get the number you've chosen
+    var form = $('#guess_form');      
+      console.log(form);
+      form.on('submit', function(event) {
+        event.preventDefault(); 
+        var users_guess = this.user_guess.value;
+        // Generate a random number to be the number the computer is 'holding up'
+        // if the number you've chosen is the same as the number for the computer: CORRECT
+        // else INCORRECT
+      })
+    });
+  </script>
+  </body>
+</html>
